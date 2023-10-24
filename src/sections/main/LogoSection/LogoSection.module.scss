@@ -7,8 +7,60 @@
 
   section.logoSection {
     width: 100vw;
-    height: calc(100dvh - 1 * var(--scroll-down-height));
+    height: min(
+      calc(100dvh - 1 * var(--scroll-down-height)),
+      600px
+    );
     position: relative;
+    display: grid;
+    grid-template-rows: max-content 1fr;
+
+    article.body {
+      --total-cols: 20;
+
+      --header-size: 7;
+      --img-size: 6;
+
+      --left-size: 1;
+      --right-size: calc(
+        var(--total-cols)
+        - var(--header-size)
+        - var(--img-size)
+        - var(--left-size)
+      );
+
+      overflow: hidden;
+
+      .gap {
+        &.left {
+          grid-column: span var(--left-size);
+        }
+
+        &.right {
+          grid-column: span var(--right-size);
+        }
+      }
+
+      header.logoHolder {
+        grid-column: span var(--header-size);
+        display: flex;
+        align-items: center;
+        background: rgba(255 0 0 / .25);
+      }
+
+      .imageHolder {
+        grid-column: span var(--img-size);
+        background: rgba(0 0 255 / .25);
+        margin-top: 3em;
+
+        img.iphone {
+          max-width: 100%;
+          max-height: 100% !important;
+          object-fit: scale-down;
+          display: none;
+        }
+      }
+    }
 
     article.scrollDownHolder {
       @apply w-full absolute flex justify-center items-center;

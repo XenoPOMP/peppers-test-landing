@@ -1,0 +1,65 @@
+@import "src/styles/templates";
+
+.logoPlaceholder {
+  color: white;
+
+  .label {
+    position: relative;
+
+    .popup {
+      position: absolute;
+      bottom: calc(100% + 4px);
+      right: 0;
+      width: 40%;
+      font-size: min(.8cqw, 11px);
+
+      span.text {
+        @extend %flexCenter;
+
+        @apply px-[.75em];
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 75%;
+        z-index: 2;
+        text-transform: uppercase;
+      }
+    }
+
+    .downloadText {
+      @extend %flexCenter;
+
+      @apply mt-[.75em];
+
+      width: 100%;
+      height: 20px;
+      font-size: clamp(12px, 1.2cqw, .8em);
+      justify-content: space-between;
+      gap: 1em;
+
+      .line {
+        flex-grow: 1;
+        height: 1px;
+        background: rgba(255 255 255 / .25);
+      }
+
+      &:has(+ *) {
+        @apply mb-[.75em];
+      }
+    }
+
+    .storesLinks {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: calc(var(--margin) * 0.5);
+
+      img {
+        border: 2px solid rgba(255 255 255 / .25);
+        border-radius: .25em;
+      }
+    }
+  }
+}
