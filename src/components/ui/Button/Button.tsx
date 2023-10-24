@@ -9,6 +9,7 @@ const Button: FC<ButtonProps> = ({
   children,
   className,
   variant = 'default',
+  isRhomboid,
   ...props
 }) => {
   const partialStyles: Partial<
@@ -27,7 +28,8 @@ const Button: FC<ButtonProps> = ({
   return (
     <button
       className={cn(
-        'bg-[#13b79e] text-white rounded-[.5em] py-[.5em] px-[1.5em]',
+        'bg-[#13b79e] text-white rounded-[.5em]',
+        isRhomboid ? styles.rhomboid : 'py-[.5em] px-[1.5em]',
         styles.uiButton,
         partialStyles[variant]?.className,
         className

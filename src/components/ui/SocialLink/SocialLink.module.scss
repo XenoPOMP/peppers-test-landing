@@ -1,0 +1,16 @@
+@import "src/styles/templates";
+
+button.socialMediaLink {
+  @extend %flexCenter;
+
+  height: 1.7em;
+  width: 1.7em;
+
+  img {
+    $size: 2.15em;
+
+    height: $size;
+    width: $size;
+    max-width: unset;
+  }
+}

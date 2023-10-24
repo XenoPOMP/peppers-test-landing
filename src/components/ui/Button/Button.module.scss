@@ -1,4 +1,32 @@
 button.uiButton {
+  &.rhomboid {
+    aspect-ratio: 1;
+
+    &:before {
+      @apply rounded-[.2em];
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: red;
+      content: "";
+      z-index: -1;
+      rotate: 45deg;
+    }
+
+    &.transparent {
+      border: none;
+      position: relative;
+
+      &:before {
+        background: transparent;
+        border: 2px solid currentColor;
+      }
+    }
+  }
+
   &.transparent {
     background: transparent !important;
     color: white;

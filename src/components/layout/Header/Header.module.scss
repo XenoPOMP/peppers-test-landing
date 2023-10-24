@@ -1,5 +1,9 @@
 header.appHeader {
+  @apply pt-[1.75em];
+
   color: white;
 
-  section.container {}
+  section.container {
+    @apply flex justify-between items-center;
+  }
 }
