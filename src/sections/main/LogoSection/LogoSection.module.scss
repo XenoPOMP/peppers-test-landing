@@ -7,7 +7,7 @@
 
   section.logoSection {
     width: 100vw;
-    height: calc(100dvh - 2 * var(--scroll-down-height));
+    height: calc(100dvh - 1 * var(--scroll-down-height));
     position: relative;
 
     article.scrollDownHolder {

@@ -14,9 +14,9 @@ import { LogoSectionProps } from './LogoSection.props';
 const LogoSection: FC<LogoSectionProps> = ({ className, ...props }) => {
   return (
     <div className={cn(styles.logoSectionWrapper)}>
-      <Header />
-
       <UiContainer className={cn(styles.logoSection, className)} {...props}>
+        <Header />
+
         <article className={cn(styles.scrollDownHolder)}>
           <Button className={cn(styles.scrollDownButton, '!px-[2em]')}>
             <div className={cn(styles.inner)}>ВНИЗ</div>
