@@ -2,11 +2,11 @@
   --scroll-down-height: 2.45em;
 
   font-size: 1rem; // 1em = 20px
+  position: relative;
 
   section.logoSection {
     width: 100vw;
-    height: calc(100dvh - 1 * var(--scroll-down-height));
-    background-color: red;
+    height: calc(100dvh - 1.5 * var(--scroll-down-height));
     position: relative;
 
     article.scrollDownHolder {
@@ -18,6 +18,7 @@
         @apply flex justify-center items-center gap-[2em];
 
         height: var(--scroll-down-height);
+        z-index: 5;
 
         // Сгенерил тень через сайт
         box-shadow: -2px -8px 57px 0px rgba(0, 0, 0, 0.54);
@@ -27,5 +28,15 @@
         }
       }
     }
+  }
+
+  img.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    z-index: -2;
   }
 }
