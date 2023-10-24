@@ -31,6 +31,7 @@ const UiGrid: FC<UiGridNestedProps> = ({
   rows = 1,
   gap = 'calc(var(--margin) * 0.5)',
   margin,
+  ...props
 }) => {
   return (
     <UiContainer
@@ -41,6 +42,7 @@ const UiGrid: FC<UiGridNestedProps> = ({
         ...style,
       }}
       margin={margin}
+      {...props}
     >
       {children}
     </UiContainer>
