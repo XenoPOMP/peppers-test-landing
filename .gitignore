@@ -132,3 +132,6 @@ dist
 # Template development specific files
 app/test
 **/{ignore}/*
+
+# IDEA`s needed files
+!**/.idea/**/prettier.xml
