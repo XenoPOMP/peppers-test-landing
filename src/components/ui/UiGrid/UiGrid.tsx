@@ -27,9 +27,9 @@ const UiGrid: FC<UiGridNestedProps> = ({
   className,
   id,
   style,
-  columns = 12,
+  columns = 20,
   rows = 1,
-  gap = '1rem',
+  gap = 'calc(var(--margin) * 0.5)',
   margin,
 }) => {
   return (
