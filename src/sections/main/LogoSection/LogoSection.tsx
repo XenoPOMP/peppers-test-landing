@@ -18,7 +18,7 @@ const LogoSection: FC<LogoSectionProps> = ({ className, ...props }) => {
 
       <UiContainer className={cn(styles.logoSection, className)} {...props}>
         <article className={cn(styles.scrollDownHolder)}>
-          <Button className={cn(styles.scrollDownButton, 'px-[2em]')}>
+          <Button className={cn(styles.scrollDownButton, '!px-[2em]')}>
             <div className={cn(styles.inner)}>ВНИЗ</div>
 
             <Image src={arrowDownIcon} alt={'Down icon'} priority={true} />
