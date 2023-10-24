@@ -6,4 +6,8 @@ header.appHeader {
   section.container {
     @apply flex justify-between items-center;
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }

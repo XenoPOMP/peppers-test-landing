@@ -18,7 +18,12 @@ const Logo: FC<LogoProps> = ({ className, ...props }) => {
         <Image src={shopGuideImg} alt={'Logo'} priority={true} />
 
         <div className={cn(styles.popup)}>
-          <Image src={popupBodyImg} alt={'Popup body'} priority={true} />
+          <Image
+            src={popupBodyImg}
+            alt={'Popup body'}
+            priority={true}
+            className={cn(styles.logoMain)}
+          />
 
           <span className={cn(styles.text)}>Только лучшие акции</span>
         </div>

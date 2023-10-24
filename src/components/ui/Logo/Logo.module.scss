@@ -6,6 +6,10 @@
   .label {
     position: relative;
 
+    img.logoMain {
+      // min-width: unset !important;
+    }
+
     .popup {
       position: absolute;
       bottom: calc(100% + 4px);
@@ -25,6 +29,14 @@
         height: 75%;
         z-index: 2;
         text-transform: uppercase;
+      }
+
+      @media (max-width: 1280px) {
+        font-size: clamp(9px, .75cqw, 11px);
+      }
+
+      @media (max-width: 501px) {
+        // font-size: clamp(8px, .75cqw, 11px);
       }
     }
 
@@ -55,6 +67,16 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: calc(var(--margin) * 0.5);
+
+      @media (max-width: 514px) {
+        grid-template-columns: repeat(1, 1fr);
+
+        img {
+          @apply mx-auto;
+
+          width: 50%;
+        }
+      }
 
       img {
         border: 2px solid rgba(255 255 255 / .25);

@@ -6,4 +6,8 @@
   --margin: 2rem;
 
   width: min(var(--max-container-width), calc(100% - 2 * var(--margin)));
+
+  @media (max-width: 768px) {
+    --margin: 1rem;
+  }
 }
