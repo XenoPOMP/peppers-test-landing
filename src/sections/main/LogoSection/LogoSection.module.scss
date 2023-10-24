@@ -1,0 +1,31 @@
+.logoSectionWrapper {
+  --scroll-down-height: 2.45em;
+
+  font-size: 1rem; // 1em = 20px
+
+  section.logoSection {
+    width: 100vw;
+    height: calc(100dvh - 1 * var(--scroll-down-height));
+    background-color: red;
+    position: relative;
+
+    article.scrollDownHolder {
+      @apply w-full absolute flex justify-center items-center;
+
+      top: calc(100% - 0.5 * var(--scroll-down-height));
+
+      button.scrollDownButton {
+        @apply flex justify-center items-center gap-[2em];
+
+        height: var(--scroll-down-height);
+
+        // Сгенерил тень через сайт
+        box-shadow: -2px -8px 57px 0px rgba(0, 0, 0, 0.54);
+
+        .inner {
+          font-size: .7em;
+        }
+      }
+    }
+  }
+}

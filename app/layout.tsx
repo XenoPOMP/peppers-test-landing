@@ -27,11 +27,11 @@ export default function RootLayout({
     <html lang='en'>
       <body className={mainFont.className}>
         <Providers>
-          <Header />
+          {/*<Header />*/}
 
           {children}
 
-          <Footer />
+          {/*<Footer />*/}
         </Providers>
       </body>
     </html>

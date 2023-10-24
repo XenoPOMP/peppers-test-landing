@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-body {}
+body {
+  overflow-x: hidden;
+}
 
 :root {
   font-size: 20px;
