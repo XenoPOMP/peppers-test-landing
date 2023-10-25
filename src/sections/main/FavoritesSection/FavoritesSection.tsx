@@ -1,6 +1,10 @@
+'use client';
+
+import { Tab } from '@headlessui/react';
+import { PropsWith } from '@xenopomp/advanced-types';
 import cn from 'classnames';
 import Image from 'next/image';
-import { FC } from 'react';
+import { FC, Fragment } from 'react';
 
 import UiContainer from '@/src/components/ui/UiContainer/UiContainer';
 import UiGrid from '@/src/components/ui/UiGrid/UiGrid';
@@ -27,6 +31,24 @@ const FavoritesSection: FC<FavoritesSectionProps> = ({
     );
   };
 
+  const TabHeading: FC<PropsWith<'children', {}>> = ({ children }) => {
+    return (
+      <Tab as={Fragment}>
+        {({ selected }) => (
+          <h3
+            className={cn(
+              styles.heading,
+              !selected && styles.hidden,
+              'select-none cursor-pointer'
+            )}
+          >
+            {children}
+          </h3>
+        )}
+      </Tab>
+    );
+  };
+
   return (
     <div className={cn(styles.favoritesSectionHolder)}>
       <UiContainer
@@ -50,7 +72,26 @@ const FavoritesSection: FC<FavoritesSectionProps> = ({
             />
           </div>
 
-          <div className={cn(styles.tabControl)}></div>
+          <div className={cn(styles.tabControl)}>
+            <Tab.Group>
+              <Tab.List as={'div'} className={cn(styles.tabs)}>
+                <TabHeading>Профиль акции</TabHeading>
+                <TabHeading>Подписки</TabHeading>
+                <TabHeading>Карта</TabHeading>
+                <TabHeading>Моя лента</TabHeading>
+              </Tab.List>
+
+              <Tab.Panels>
+                <Tab.Panel as={'div'}>Content 1</Tab.Panel>
+
+                <Tab.Panel as={'div'}>Content 2</Tab.Panel>
+
+                <Tab.Panel as={'div'}>Content 3</Tab.Panel>
+
+                <Tab.Panel as={'div'}>Content 4</Tab.Panel>
+              </Tab.Panels>
+            </Tab.Group>
+          </div>
         </UiGrid>
 
         <Gap disabled />
