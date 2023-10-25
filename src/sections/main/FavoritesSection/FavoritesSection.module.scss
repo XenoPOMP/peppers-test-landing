@@ -16,8 +16,9 @@
 
       &.hidden {
         opacity: .3;
-        border-bottom: none;
-        padding-bottom: 0 !important;
+        // border-bottom: none;
+        // padding-bottom: 0 !important;
+        border-color: transparent;
 
         transition: .15s ease border-bottom;
       }
@@ -57,17 +58,22 @@
           height: calc(100% + 2 * $overflow);
           width: 100%;
           object-fit: contain;
+
+          transition: .15s ease opacity;
         }
       }
 
       .tabControl {
         height: 100%;
-        background: blue;
         grid-column-start: 3;
         grid-column-end: 4;
 
         .tabs {
-          @apply flex gap-[1em];
+          @apply flex gap-x-[1em] gap-y-[.25em] flex-wrap;
+        }
+
+        .content {
+          @apply mt-[2em] flex flex-col gap-[1em];
         }
       }
     }
