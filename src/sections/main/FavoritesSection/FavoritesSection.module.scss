@@ -1,0 +1,64 @@
+.favoritesSectionHolder {
+  --padding-y: 3.5em;
+
+  @apply bg-[#29d3d1] text-white;
+
+  padding-top: var(--padding-y);
+  padding-bottom: var(--padding-y);
+
+  h2, h3 {
+    &.heading {
+      @apply uppercase;
+
+      font-size: 1.6em;
+
+      &.hidden {
+        opacity: .3;
+      }
+    }
+  }
+
+  section.favorites {
+    display: flex;
+    gap: calc(var(--margin) * .5);
+    height: 20em;
+
+    article.gap {
+      flex-grow: 1;
+      height: 100%;
+
+      @media (max-width: 1280px) {
+        display: none;
+      }
+    }
+
+    article.grid {
+      grid-template-columns: max-content 1fr 12fr !important;
+
+      .imageHolder {
+        // grid-column: span 1;
+        height: 100%;
+        position: relative;
+        width: 16.75em;
+
+        img.phone {
+          $overflow: calc(var(--padding-y) * 2);
+
+          position: absolute;
+          top: calc(0px - $overflow);
+          left: 0;
+          height: calc(100% + 2 * $overflow);
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .tabControl {
+        height: 100%;
+        background: blue;
+        grid-column-start: 3;
+        grid-column-end: 4;
+      }
+    }
+  }
+}
