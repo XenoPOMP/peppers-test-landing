@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
 import { AppConstants } from '@/app/app.constants';
+import Footer from '@/src/components/layout/Footer/Footer';
 import Providers from '@/src/components/layout/Providers/Providers';
 import { FuturaDemiC } from '@/src/fonts/futura-font-familiy';
 
@@ -29,7 +30,7 @@ export default function RootLayout({
 
           {children}
 
-          {/*<Footer />*/}
+          <Footer />
         </Providers>
       </body>
     </html>
