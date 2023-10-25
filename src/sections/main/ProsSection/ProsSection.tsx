@@ -13,11 +13,13 @@ const ProsSection: FC<ProsSectionProps> = ({ className, ...props }) => {
       <StrongSide
         heading={'Только лучшее'}
         desc={'Всегда актуальные акции и скидки у вас в телефоне'}
+        icon={'like'}
       />
 
       <StrongSide
         heading={'Все рядом'}
         desc={'Находите ближайшие акции на карте рядом с вами.'}
+        icon={'gps'}
       />
 
       <StrongSide
@@ -25,6 +27,7 @@ const ProsSection: FC<ProsSectionProps> = ({ className, ...props }) => {
         desc={
           'Подписывайтесь только на то, что вас интересует и всегда будьте в курсе новых акций.'
         }
+        icon={'bell'}
       />
 
       <StrongSide
@@ -32,6 +35,7 @@ const ProsSection: FC<ProsSectionProps> = ({ className, ...props }) => {
         desc={
           'Огромный каталог с информацией о магазинах, брендах и ТЦ всегда под рукой.'
         }
+        icon={'catalog'}
       />
     </UiContainer>
   );

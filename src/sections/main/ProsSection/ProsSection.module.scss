@@ -1,5 +1,5 @@
 section.pros {
-  @apply mt-[5em] grid gap-[1em] justify-between;
+  @apply my-[5em] grid gap-[1em] justify-between;
 
   font-size: 1rem; // 1em = 20px
   grid-template-columns: repeat(4, 1fr);

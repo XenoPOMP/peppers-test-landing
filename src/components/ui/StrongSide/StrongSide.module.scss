@@ -1,16 +1,24 @@
+@import "src/styles/templates";
+
 article.strongSide {
   @apply flex flex-col gap-[1.9em];
 
-  background: red;
-
   .iconHolder {
+    @extend %flexCenter;
+
     height: 4.875em;
     width: 100%;
-    background: blue;
+    // background: blue;
+
+    img {
+      height: 100%;
+    }
   }
 
   footer.sideBlockFooter {
     @apply flex flex-col gap-[.85em] items-center;
+
+    // background: red;
 
     line-height: 112.5%;
 
