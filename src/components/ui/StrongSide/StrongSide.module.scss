@@ -1,0 +1,25 @@
+article.strongSide {
+  @apply flex flex-col gap-[1.9em];
+
+  background: red;
+
+  .iconHolder {
+    height: 4.875em;
+    width: 100%;
+    background: blue;
+  }
+
+  footer.sideBlockFooter {
+    @apply flex flex-col gap-[.85em] items-center;
+
+    line-height: 112.5%;
+
+    h2 {
+      @apply uppercase text-[1.1em] text-center;
+    }
+
+    p.under {
+      @apply text-[.9em] text-center;
+    }
+  }
+}
