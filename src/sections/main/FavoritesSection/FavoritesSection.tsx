@@ -33,7 +33,7 @@ const FavoritesSection: FC<FavoritesSectionProps> = ({
 
   const TabHeading: FC<PropsWith<'children', {}>> = ({ children }) => {
     return (
-      <Tab as={Fragment}>
+      <Tab as={'li'} className={'focus:outline-0'}>
         {({ selected }) => (
           <h3
             className={cn(
@@ -74,7 +74,7 @@ const FavoritesSection: FC<FavoritesSectionProps> = ({
 
           <div className={cn(styles.tabControl)}>
             <Tab.Group>
-              <Tab.List as={'div'} className={cn(styles.tabs)}>
+              <Tab.List as={'ul'} className={cn(styles.tabs)}>
                 <TabHeading>Профиль акции</TabHeading>
                 <TabHeading>Подписки</TabHeading>
                 <TabHeading>Карта</TabHeading>
