@@ -1,1 +1,52 @@
-footer.appFooter {}
+@import "src/styles/templates";
+
+footer.appFooter {
+  @apply py-[2em];
+
+  position: relative;
+  font-size: 1rem; // 1em = 20px
+  color: white;
+
+  section.body {
+    @apply flex justify-between items-center gap-[2em];
+
+    @media (max-width: 768px) {
+      @apply flex-col;
+    }
+
+    nav.links {
+      @apply flex flex-col gap-[.25em];
+
+      font-size: .9em; // 1em = 18px
+
+      h3 {
+
+      }
+
+      ul {
+        @extend %notSelectable;
+
+        @apply flex flex-wrap gap-x-[3em] gap-y-[.5em];
+
+        li {
+          @apply uppercase text-[.7em] hover:opacity-100;
+
+          opacity: .3;
+          border-bottom: 2px solid currentColor;
+
+          transition: .15s ease opacity;
+        }
+      }
+    }
+  }
+
+  img.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+}
