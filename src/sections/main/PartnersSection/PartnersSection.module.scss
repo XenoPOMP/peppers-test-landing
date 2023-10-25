@@ -1,0 +1,55 @@
+@import "src/styles/templates";
+
+section.partners {
+  @apply mt-[4em] mb-[2em];
+
+  @media (max-width: 768px) {
+    @apply mt-[0em];
+  }
+
+  font-size: 1rem; // 1em = 20px
+
+  .listHolder {
+    @apply bg-[#eb645a] my-[1em];
+
+    article.partnersList {
+      @apply py-[1.5em] flex justify-center items-center;
+
+      a {
+        @extend %notSelectable;
+      }
+
+      img.brand {
+        @extend %notSelectable;
+
+        opacity: .3;
+        height: 4em;
+        object-fit: contain;
+
+        @media (max-width: 768px) {
+          // object-fit: none;
+        }
+
+        transition: .15s ease opacity;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  article.form {
+    @extend %flexCenter;
+
+    @apply pt-[.5em] flex-col;
+
+    font-size: 1.1em;
+    text-align: center;
+    line-height: 118%;
+
+    button.confirm {
+      @apply mt-[1em];
+    }
+  }
+}
