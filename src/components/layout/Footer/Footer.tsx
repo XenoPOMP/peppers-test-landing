@@ -6,7 +6,6 @@ import { FC } from 'react';
 import chatBubbleIcon from '@/public/images/icons/Comment_bubble.png';
 import Button from '@/src/components/ui/Button/Button';
 import UiContainer from '@/src/components/ui/UiContainer/UiContainer';
-import UiGrid from '@/src/components/ui/UiGrid/UiGrid';
 import { FuturaBookPT } from '@/src/fonts/futura-font-familiy';
 import bgImage from '@/task/design/images/bg.jpg';
 
