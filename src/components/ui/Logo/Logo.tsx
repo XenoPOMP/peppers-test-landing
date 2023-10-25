@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
+import { FuturaBookPT } from '@/src/fonts/futura-font-familiy';
+import { SfUiDisplay } from '@/src/fonts/sf-ui-display';
 import downloadAndroidImg from '@/task/design/images/download_android.svg';
 import downloadIosImg from '@/task/design/images/download_ios.svg';
 import popupBodyImg from '@/task/design/images/only_popup.svg';
@@ -25,10 +27,14 @@ const Logo: FC<LogoProps> = ({ className, ...props }) => {
             className={cn(styles.logoMain)}
           />
 
-          <span className={cn(styles.text)}>Только лучшие акции</span>
+          <span
+            className={cn(styles.text, SfUiDisplay.className, 'font-medium')}
+          >
+            Только лучшие акции
+          </span>
         </div>
 
-        <div className={cn(styles.downloadText)}>
+        <div className={cn(styles.downloadText, FuturaBookPT.className)}>
           <div className={cn(styles.line)}></div>
 
           <span>загрузить</span>

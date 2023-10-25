@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 import { AppConstants } from '@/app/app.constants';
 import Providers from '@/src/components/layout/Providers/Providers';
-import { FuturaDemiC } from '@/src/fonts/FuturaDemiC.font';
+import { FuturaDemiC } from '@/src/fonts/futura-font-familiy';
 
 import './globals.scss';
 
