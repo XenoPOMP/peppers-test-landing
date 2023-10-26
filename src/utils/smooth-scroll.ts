@@ -15,9 +15,9 @@ export const smoothScroll = (
   }
 
   scroller.scrollTo(id.replace(/^#/i, ''), {
-    duration: props?.duration ? props?.duration : 1000,
-    delay: props?.delay ? props?.delay : 0,
-    smooth: props?.ease ? props?.ease : 'easeOut',
-    offset: props?.offset ? props?.offset : -50,
+    duration: props?.duration ?? 1000,
+    delay: props?.delay ?? 0,
+    smooth: props?.ease ?? 'easeOut',
+    offset: props?.offset ?? -50,
   });
 };
