@@ -9,7 +9,7 @@ export default function Home() {
     <main>
       <LogoSection />
 
-      <ProsSection />
+      <ProsSection id={'pros-section'} />
 
       <FavoritesSection />
 

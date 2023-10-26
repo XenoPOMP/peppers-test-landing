@@ -18,10 +18,12 @@
     "autoprefixer": "10.4.15",
     "axios": "1.5.0",
     "classnames": "^2.3.2",
+    "framer-motion": "^10.16.4",
     "next": "13.4.12",
     "postcss": "8.4.27",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-scroll": "^1.9.0",
     "sass": "1.67.0",
     "swiper": "^11.0.2",
     "tailwindcss": "3.3.3",
@@ -30,6 +32,7 @@
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+    "@types/react-scroll": "^1.8.9",
     "@xenopomp/advanced-types": "^1.1.6",
     "prettier": "2.8.1"
   }
