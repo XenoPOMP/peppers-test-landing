@@ -17,7 +17,10 @@ const ScrollDownButton: FC<ScrollDownButtonProps> = ({}) => {
       className={cn(styles.scrollDownButton, '!px-[2em]')}
       noHoverAnimation
       onClick={() => {
-        smoothScroll('pros-section');
+        smoothScroll('pros-section', {
+          duration: 800,
+          ease: 'easeOut',
+        });
       }}
     >
       <div className={cn(styles.inner)}>ВНИЗ</div>
