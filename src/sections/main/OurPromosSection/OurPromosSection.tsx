@@ -34,7 +34,7 @@ const OurPromosSection: FC<OurPromosSectionProps> = ({
           </div>
         </article>
 
-        <article className={cn(styles.image)}>
+        <article className={cn(styles.image, 'select-none')}>
           <Image
             src={frontPhoneImg}
             alt={'Front phone image'}

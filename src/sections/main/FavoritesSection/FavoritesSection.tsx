@@ -70,7 +70,7 @@ const FavoritesSection: FC<FavoritesSectionProps> = ({
           columns={18}
           className={cn(styles.grid)}
         >
-          <div className={cn(styles.imageHolder)}>
+          <div className={cn(styles.imageHolder, 'select-none')}>
             <Image
               src={promosPhoneImg}
               alt={'Promos'}

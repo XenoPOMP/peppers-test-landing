@@ -30,7 +30,7 @@ const LogoSection: FC<LogoSectionProps> = ({ className, ...props }) => {
 
           <div className={cn(styles.gap, styles.right)}></div>
 
-          <div className={cn(styles.imageHolder)}>
+          <div className={cn(styles.imageHolder, 'select-none')}>
             <Image
               src={iphoneImg}
               alt={'Phone image'}

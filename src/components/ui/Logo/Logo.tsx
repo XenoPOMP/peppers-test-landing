@@ -43,11 +43,11 @@ const Logo: FC<LogoProps> = ({ className, ...props }) => {
         </div>
 
         <div className={cn(styles.storesLinks)}>
-          <Link href={'/'}>
+          <Link href={'/'} className={cn('select-none')}>
             <Image src={downloadIosImg} alt={'App Store image'} />
           </Link>
 
-          <Link href={'/'}>
+          <Link href={'/'} className={cn('select-none')}>
             <Image src={downloadAndroidImg} alt={'Google Play Store image'} />
           </Link>
         </div>
