@@ -5,6 +5,7 @@ import { FC } from 'react';
 import Header from '@/src/components/layout/Header/Header';
 import Button from '@/src/components/ui/Button/Button';
 import Logo from '@/src/components/ui/Logo/Logo';
+import ScrollDownButton from '@/src/components/ui/ScrollDownButton/ScrollDownButton';
 import UiContainer from '@/src/components/ui/UiContainer/UiContainer';
 import UiGrid from '@/src/components/ui/UiGrid/UiGrid';
 import iphoneImg from '@/task/design/images/_phone1_cropped.png';
@@ -39,13 +40,7 @@ const LogoSection: FC<LogoSectionProps> = ({ className, ...props }) => {
         </UiGrid>
 
         <article className={cn(styles.scrollDownHolder)}>
-          <Button className={cn(styles.scrollDownButton, '!px-[2em]')}>
-            <div className={cn(styles.inner)}>ВНИЗ</div>
-
-            <Image src={arrowDownIcon} alt={'Down icon'} priority={true} />
-
-            <div className={cn(styles.inner)}>ВНИЗ</div>
-          </Button>
+          <ScrollDownButton />
         </article>
       </UiContainer>
 

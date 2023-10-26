@@ -1,4 +1,18 @@
 button.uiButton {
+  transition: .1s ease scale;
+
+  &:not(.noHoverAnimation) {
+    &:hover {
+      scale: 1.05;
+    }
+  }
+
+  &:not(.noClickAnimation) {
+    &:active {
+      scale: .95;
+    }
+  }
+
   &.rhomboid {
     aspect-ratio: 1;
 

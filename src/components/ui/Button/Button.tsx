@@ -10,6 +10,7 @@ const Button: FC<ButtonProps> = ({
   className,
   variant = 'default',
   isRhomboid,
+  noHoverAnimation,
   ...props
 }) => {
   const partialStyles: Partial<
@@ -32,6 +33,7 @@ const Button: FC<ButtonProps> = ({
         isRhomboid ? styles.rhomboid : 'py-[.5em] px-[1.5em]',
         styles.uiButton,
         partialStyles[variant]?.className,
+        noHoverAnimation && styles.noHoverAnimation,
         className
       )}
       {...props}
