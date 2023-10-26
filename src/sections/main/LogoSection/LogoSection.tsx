@@ -45,7 +45,7 @@ const LogoSection: FC<LogoSectionProps> = ({ className, ...props }) => {
         </article>
       </UiContainer>
 
-      <BackgroundImage src={bgImage} alt={'Background'} />
+      <BackgroundImage src={bgImage} alt={'Background'} priority={true} />
     </div>
   );
 };
