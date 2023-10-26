@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { FC } from 'react';
 
 import chatBubbleIcon from '@/public/images/icons/Comment_bubble.png';
+import BackgroundImage from '@/src/components/ui/BackgroundImage/BackgroundImage';
 import Button from '@/src/components/ui/Button/Button';
 import UiContainer from '@/src/components/ui/UiContainer/UiContainer';
 import { FuturaBookPT } from '@/src/fonts/futura-font-familiy';
@@ -43,7 +44,7 @@ const Footer: FC<FooterProps> = ({}) => {
         </Link>
       </UiContainer>
 
-      <Image src={bgImage} alt={'Background'} className={styles.background} />
+      <BackgroundImage src={bgImage} alt={'Background'} />
     </footer>
   );
 };
