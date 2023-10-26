@@ -5,6 +5,16 @@ import { FC } from 'react';
 import styles from './BackgroundImage.module.scss';
 import type { BackgroundImageProps } from './BackgroundImage.props';
 
+/**
+ * Background image component. Needs to be placed inside
+ * __relative__ container.
+ *
+ * @param className
+ * @param [objectFit='cover']
+ * @param style
+ * @param props
+ * @constructor
+ */
 const BackgroundImage: FC<BackgroundImageProps> = ({
   className,
   objectFit = 'cover',
