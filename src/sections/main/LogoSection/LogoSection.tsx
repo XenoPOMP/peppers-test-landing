@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { FC } from 'react';
 
 import Header from '@/src/components/layout/Header/Header';
+import BackgroundImage from '@/src/components/ui/BackgroundImage/BackgroundImage';
 import Button from '@/src/components/ui/Button/Button';
 import Logo from '@/src/components/ui/Logo/Logo';
 import ScrollDownButton from '@/src/components/ui/ScrollDownButton/ScrollDownButton';
@@ -44,7 +45,7 @@ const LogoSection: FC<LogoSectionProps> = ({ className, ...props }) => {
         </article>
       </UiContainer>
 
-      <Image src={bgImage} alt={'Background'} className={styles.background} />
+      <BackgroundImage src={bgImage} alt={'Background'} priority={true} />
     </div>
   );
 };
